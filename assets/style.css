@@ -1,0 +1,39 @@
+:root {
+  --bs-warning: #f0b100;
+  --bs-dark: #101828;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Bootstrap Warning Color Override */
+.btn-warning {
+  background-color: var(--bs-warning);
+  border-color: var(--bs-warning);
+}
+
+.btn-warning:hover {
+  background-color: #d99c00;
+  border-color: #d99c00;
+}
+
+.text-warning {
+  color: var(--bs-warning) !important;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--bs-dark);
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+}
