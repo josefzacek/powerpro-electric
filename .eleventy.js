@@ -1,9 +1,22 @@
 const path = require("path");
 const sass = require("sass");
+const htmlmin = require("html-minifier");
 
 module.exports = function(eleventyConfig) {
   // Copy assets folder to _site
   eleventyConfig.addPassthroughCopy("assets");
+
+  // Minify HTML
+  eleventyConfig.addTransform("htmlmin", function(content) {
+    if (this.page.outputPath && this.page.outputPath.endsWith(".html")) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true,
+      });
+    }
+    return content;
+  });
 
   // Compile and Minify SCSS to CSS
   eleventyConfig.addTemplateFormats("scss");
