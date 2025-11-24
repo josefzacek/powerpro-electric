@@ -16,3 +16,12 @@ npx @11ty/eleventy --serve
 
 The site will be available at `http://localhost:8080`
 
+Node modules installed
+
+```bash
+npm install --save-dev @11ty/eleventy
+```
+
+```bash
+npm install --save-dev sass
+```

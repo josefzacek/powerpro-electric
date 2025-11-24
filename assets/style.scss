@@ -1,7 +1,5 @@
-:root {
-  --bs-warning: #f0b100;
-  --bs-dark: #101828;
-}
+$yellow-color: #ffcc00;
+$dark-color: #101828;
 
 body {
   font-family: 'Inter', sans-serif;
@@ -9,22 +7,22 @@ body {
 
 /* Bootstrap Warning Color Override */
 .btn-warning {
-  background-color: var(--bs-warning);
-  border-color: var(--bs-warning);
+  background-color: $yellow-color;
+  border-color: $yellow-color;
 }
 
 .btn-warning:hover {
-  background-color: #d99c00;
-  border-color: #d99c00;
+  background-color: $yellow-color;
+  border-color: $yellow-color;
 }
 
 .text-warning {
-  color: var(--bs-warning) !important;
+  color: $yellow-color !important;
 }
 
 /* Footer Styles */
 footer {
-  background-color: var(--bs-dark);
+  background-color: $dark-color;
   .social-icon {
     width: 40px;
     height: 40px;
