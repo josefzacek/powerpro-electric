@@ -25,3 +25,7 @@ npm install --save-dev @11ty/eleventy
 ```bash
 npm install --save-dev sass
 ```
+
+```bash
+npm install --save-dev html-minifier
+```
