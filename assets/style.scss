@@ -12,12 +12,28 @@ body {
 }
 
 .btn-warning:hover {
-  background-color: $yellow-color;
-  border-color: $yellow-color;
+  opacity: 0.85;
 }
 
 .text-warning {
   color: $yellow-color !important;
+}
+
+/* banner Section Styles */
+.banner {
+  .banner-overlay {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+  }
+  h1 {
+    font-size: 36px;
+    @media (min-width: 991px) {
+      font-size: 48px;
+      line-height: 52px;
+    }
+    @media (min-width: 1200px) {
+      font-size: 72px;
+    }
+  }
 }
 
 /* Footer Styles */
