@@ -5,6 +5,10 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.bg-yellow {
+  background-color: $yellow-color;
+}
+
 /* Bootstrap Warning Color Override */
 .btn-warning {
   background-color: $yellow-color;
