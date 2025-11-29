@@ -1,6 +1,7 @@
 const path = require("path");
 const sass = require("sass");
 const htmlmin = require("html-minifier");
+const { minify } = require("terser");
 
 module.exports = function(eleventyConfig) {
   // Copy assets folder to _site
@@ -36,6 +37,23 @@ module.exports = function(eleventyConfig) {
       return async () => {
         return result.css;
       };
+    }
+  });
+
+
+  // Minify JS
+  eleventyConfig.addTemplateFormats("js");
+  eleventyConfig.addExtension("js", {
+    outputFileExtension: "js",
+    compile: async (inputContent, inputPath) => {
+      // Only process files in assets folder
+      if (inputPath.startsWith("./assets/")) {
+        return async () => {
+          const result = await minify(inputContent);
+          return result.code;
+        };
+      }
+      return async () => inputContent;
     }
   });
   

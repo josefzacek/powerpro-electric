@@ -29,3 +29,7 @@ npm install --save-dev sass
 ```bash
 npm install --save-dev html-minifier
 ```
+
+```bash
+npm install --save-dev terser
+```
