@@ -11,7 +11,7 @@ Start the development server:
 create a file named `index.html`  and run the following command in your terminal:
 
 ```bash
-npx @11ty/eleventy --serve
+ELEVENTY_ENV=development npx @11ty/eleventy --serve
 ```
 
 The site will be available at `http://localhost:8080`
