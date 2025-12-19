@@ -1,3 +1,13 @@
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  easing: 'slide',
+  once: true
+});
+
+// refresh AOS on page load
+window.addEventListener('load', AOS.refresh);
+
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
